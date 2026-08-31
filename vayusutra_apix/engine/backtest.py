@@ -271,8 +271,9 @@ class DGCABacktestEngine:
         with open(report_path, "w", newline="", encoding="utf-8") as csvfile:
             fieldnames = [
                 "date", "day_index", "laspeyres_apix", "fisher_index", "paasche_index",
-                "spot_t1_index", "dgca_benchmark_yield", "daily_pct_change",
-                "bps_transport", "bps_headline", "raw_quotes", "valid_quotes", "outliers"
+                "tornqvist_index", "walsh_index", "spot_t1_index", "dgca_benchmark_yield",
+                "daily_pct_change", "bps_transport", "bps_headline", "raw_quotes",
+                "valid_quotes", "outliers"
             ]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
